@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install redis-2.2.8 \
     && docker-php-ext-enable redis
 
-RUN curl https://phar.phpunit.de/phpunit.phar -L -o phpunit.phar \
+RUN curl https://phar.phpunit.de/phpunit-5.7.phar -L -o phpunit.phar \
     && chmod +x phpunit.phar \
     && mv phpunit.phar /usr/local/bin/phpunit
 
